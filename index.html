@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HPBD Mỹ Huyền</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/css01.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="jumbotron img_banner_hpbd">
+            <div class="text-center text-danger bg-danger">
+                <h1>TO: Nguyễn Thị Mỹ Huyền</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-xs-4 col-md-4 col-sm-4">
+                <p style="padding-top: 5px"></p>
+                <span class="text-capitalize text-right bottom-align-text">
+                    <!-- <button type="button" class="btn btn-danger btn-lg text-danger" data-toggle="modal" data-target="#myModal">
+                        OPEN CARD
+                    </button> -->
+                    <p></p>
+            </div>
+            <div id="bond" class="col-xs-8 col-md-8 col-sm-8 text-center">
+                <!-- <button type="button" class="">
+
+                    </button> -->
+                <img data-toggle="modal" data-target="#myModal" class="media-object img-responsive img-thumbnail bg-snow-tranparent-hidden"
+                     src="img/Winter happy birthday.jpg" alt="80x80px" style="height: 360px">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title text-info" id="myModalLabel">Lời yêu thương gửi đến em</h4>
+
+                </div>
+                <div class="modal-body">
+                    <div class="containeri">
+                        <div class="cake-container">
+                            <!--<canvas id="cakeCanvas" width="500" height="500"></canvas>-->
+                        </div>
+                        <p id="wishMessage" class="hidden">Chúc mừng sinh nhật Mỹ Huyền! 🎉🎂</p>
+
+                        <!--<img class="img img-responsive" src="img/Winter happy birthday.jpg" alt="80x80px" style="height: 560px">-->
+                        <!--<audio controls autoplay>
+                            <source src="ms/hpbd.MP3" type="audio/ogg" />
+                            <source src="ms/hppd.MP3" type="audio/mpeg" />
+                            <a href="#">horse</a>
+                        </audio>-->
+                        <audio id="bgMusic" controls autoplay muted loop>
+                            <source src="ms/hpbd.mp3" type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <h1 class="heading text-danger bg-danger">
+                        <!--<div class="containeri">-->
+                        <!--<img class="img img-responsive" src="img/Snowmen-and-Sledding-Thank-You-Note.jpg.png">
+                        <p class="top-right">Mỹ Huyền</p>
+                        <p class="bottom-right">... </p>
+                        <p class="top-left">...</p>
+                        <p class="and">...</p>-->
+                        <!--<p class="center">Anh đang học cách để trở nên tử tế hơn, dịu dàng hơn không chỉ để trở thành người tốt hơn mà còn để xứng đáng với em người con gái mà anh trân trọng, anh cố gắng quan tâm đến từng cảm xúc nhỏ nhất của em, từ những điều em thích, những nổi buồn em giấu, cho đến những giay phút em im lặng mà chẳng nói gì.Anh biết hiểu một người không phải chuyện ngày một ngày hai và anh cũng chưa bao giờ nghĩ mình đã hiểu em hoàn toàn. Nhưng anh đang trong hành trình ấy, hành trình học cách lắng nghe, cảm nhận và thấu hiểu em từng chút một. Anh hiểu cuộc sống này không dễ dàng, em đã phải mạnh mẽ rất nhiều để bước đi đến hôm nay, Anh không muốn là người khiến em thêm mệt mỏi, anh chỉ mong có thể là nơi để em tựa vào khi yếu lòng, dù chẳng thể thay em gánh hết nhũng nhọc nhằn nhưng anh hy vọng có thể cùng em sang sẻ từ những áp lực vụng vật đến những nổi đau thầm lặng. Nếu có thể anh mong mình sẽ là người bù đắp cho em, chở che em bằng tất cả sự chân thành cả mình. Chúng ta cùng nhau bước đi, chậm cũng được miễn là đừng buôn tay nhau ra được không em!</p>
+                            <p class="bottom-left">Người thương Em</p>
+                        </div>-->
+                        <div class="birthday-typewriter">
+                            <span id="typewriterText"></span>
+                        </div>
+                    </h1>
+                    <div class="containeri">
+                        <img class="img img-responsive" src="img/MHUYEN.jpg">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cancelBtn" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <!--<button id="cancelBtn" type="button" class="btn btn-default">Cancel</button>-->
+                    <button onclick="showConfetti()" type="button" class="btn btn-primary">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid footer <!--navbar-fixed-bottom-->">
+        <!--<div class="container">
+            <div class="row">
+                <div class="col-xs-8">
+                    <p class="text-left">
+                        Copyright &copy; 2025
+                        21-06-2025
+                    </p>
+                </div>
+                <div class="col-xs-4">
+                     <p class="text-center text-capitalize kp">HAPPY BIRTHDAY TO YOU! </p>
+                     <img class="img img-responsive" src="img/title.jpg" alt="">
+                </div>
+            </div>
+        </div>-->
+        <div class="footer-slider">
+            <div class="footer-track">
+                <img src="img/img1.jpg" alt="Hình 1">
+                <img src="img/img2.jpg" alt="Hình 2">
+                <img src="img/img3.jpg" alt="Hình 3">
+                <img src="img/img4.jpg" alt="Hình 4">
+                <img src="img/img5.jpg" alt="Hình 5">
+                <img src="img/img6.jpg" alt="Hình 6">
+                <img src="img/img7.jpg" alt="Hình 7">
+                <img src="img/img8.jpg" alt="Hình 8">
+                <img src="img/img9.jpg" alt="Hình 9">
+                <img src="img/img10.jpg" alt="Hình 10">
+                <img src="img/img11.jpg" alt="Hình 11">
+                <img src="img/img12.jpg" alt="Hình 12">
+                <img src="img/img13.jpg" alt="Hình 13">
+                <img src="img/img14.jpg" alt="Hình 14">
+                <img src="img/img15.jpg" alt="Hình 15">
+                <img src="img/img16.jpg" alt="Hình 16">
+                <img src="img/img17.jpg" alt="Hình 17">
+                <img src="img/img18.jpg" alt="Hình 18">
+                <img src="img/img19.jpg" alt="Hình 19">
+                <img src="img/img20.jpg" alt="Hình 20">
+                <img src="img/img21.jpg" alt="Hình 21">
+                <img src="img/img22.jpg" alt="Hình 22">
+                <img src="img/img23.jpg" alt="Hình 23">
+                <img src="img/img24.jpg" alt="Hình 24">
+
+
+
+
+                <img src="img/img1.jpg" alt="Hình 1">
+                <img src="img/img2.jpg" alt="Hình 2">
+                <img src="img/img3.jpg" alt="Hình 3">
+                <img src="img/img4.jpg" alt="Hình 4">
+                <img src="img/img5.jpg" alt="Hình 5">
+                <img src="img/img6.jpg" alt="Hình 6">
+                <img src="img/img7.jpg" alt="Hình 7">
+                <img src="img/img8.jpg" alt="Hình 8">
+                <img src="img/img9.jpg" alt="Hình 9">
+                <img src="img/img10.jpg" alt="Hình 10">
+                <img src="img/img11.jpg" alt="Hình 11">
+                <img src="img/img12.jpg" alt="Hình 12">
+                <img src="img/img13.jpg" alt="Hình 13">
+                <img src="img/img14.jpg" alt="Hình 14">
+                <img src="img/img15.jpg" alt="Hình 15">
+                <img src="img/img16.jpg" alt="Hình 16">
+                <img src="img/img17.jpg" alt="Hình 17">
+                <img src="img/img18.jpg" alt="Hình 18">
+                <img src="img/img19.jpg" alt="Hình 19">
+                <img src="img/img20.jpg" alt="Hình 20">
+                <img src="img/img21.jpg" alt="Hình 21">
+                <img src="img/img22.jpg" alt="Hình 22">
+                <img src="img/img23.jpg" alt="Hình 23">
+                <img src="img/img24.jpg" alt="Hình 24">
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- required, default behaviour -->
+    <script src="js/snowstorm-min.js"></script>
+    <script src="js/js01.js"></script>
+    <canvas id="heartCanvas"></canvas>
+
+
+    <script>
+        const lines = [
+            "Anh đang học cách để trở nên tử tế hơn, dịu dàng hơn,",
+            "không chỉ để trở thành người tốt hơn mà còn để xứng đáng với em –",
+            "người con gái mà anh trân trọng.",
+            "",
+            "Anh cố gắng quan tâm đến từng cảm xúc nhỏ nhất của em,",
+            "từ những điều em thích, những nỗi buồn em giấu,",
+            "cho đến cả những giây phút em im lặng mà chẳng nói gì.",
+            "",
+            "Anh biết, hiểu một người không phải chuyện ngày một ngày hai...",
+            "Nhưng anh đang trong hành trình ấy –",
+            "hành trình học cách lắng nghe, cảm nhận và thấu hiểu em từng chút một.",
+            "",
+            "Anh hiểu cuộc sống này không dễ dàng.",
+            "Em đã phải mạnh mẽ rất nhiều để bước đi đến hôm nay.",
+            "Anh không muốn là người khiến em thêm mệt mỏi.",
+            "Anh chỉ mong có thể là nơi để em tựa vào khi yếu lòng.",
+            "",
+            "Dù chẳng thể thay em gánh hết những nhọc nhằn,",
+            "anh hy vọng có thể cùng em san sẻ –",
+            "từ những áp lực vụn vặt đến những nỗi đau thầm lặng.",
+            "",
+            "Nếu có thể, anh mong mình sẽ là người bù đắp cho em,",
+            "chở che em bằng tất cả sự chân thành của mình.",
+            "Chúng ta cùng nhau bước đi – chậm cũng được –",
+            "miễn là đừng buông tay nhau, được không em?",
+            "",
+            "— Người thương em"
+        ];
+
+        const el = document.getElementById("typewriterText");
+        let lineIndex = 0;
+        let charIndex = 0;
+        let currentLine = '';
+        let isTyping = true;
+
+        function typeLine() {
+            if (lineIndex >= lines.length) return;
+
+            if (charIndex < lines[lineIndex].length) {
+                currentLine += lines[lineIndex].charAt(charIndex);
+                el.innerHTML = currentLine;
+                charIndex++;
+                setTimeout(typeLine, 40); // tốc độ gõ từng chữ
+            } else {
+                currentLine += '\n';
+                el.innerHTML = currentLine;
+                lineIndex++;
+                charIndex = 0;
+                setTimeout(typeLine, 400); // thời gian nghỉ giữa các dòng
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", typeLine);
+    </script>
+    <!--<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const canvas = document.getElementById("cakeCanvas");
+            const ctx = canvas.getContext("2d");
+
+            function drawRoundedRect(x, y, width, height, radius, fillStyle) {
+                ctx.beginPath();
+                ctx.moveTo(x + radius, y);
+                ctx.lineTo(x + width - radius, y);
+                ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+                ctx.lineTo(x + width, y + height - radius);
+                ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+                ctx.lineTo(x + radius, y + height);
+                ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+                ctx.lineTo(x, y + radius);
+                ctx.quadraticCurveTo(x, y, x + radius, y);
+                ctx.closePath();
+                ctx.fillStyle = fillStyle;
+                ctx.fill();
+            }
+
+            function drawCake() {
+                // Đế bánh
+                drawRoundedRect(150, 350, 200, 40, 20, '#d2691e');
+
+                // Tầng dưới
+                drawRoundedRect(170, 290, 160, 60, 20, '#ff69b4');
+
+                // Tầng trên
+                drawRoundedRect(190, 240, 120, 50, 15, '#ffc0cb');
+
+                // Nến
+                ctx.fillStyle = "#ffffff";
+                ctx.fillRect(235, 200, 10, 40);
+
+                // Ngọn lửa sẽ vẽ bằng hàm riêng (động)
+            }
+
+            function drawFlame(time) {
+                const x = 240 + Math.sin(time / 100) * 3;
+                const y = 190 + Math.cos(time / 80) * 2;
+                const radius = 8 + Math.sin(time / 50) * 1.5;
+
+                const gradient = ctx.createRadialGradient(x, y, 1, x, y, radius);
+                gradient.addColorStop(0, "rgba(255, 255, 0, 1)");
+                gradient.addColorStop(0.5, "rgba(255, 140, 0, 0.8)");
+                gradient.addColorStop(1, "rgba(255, 69, 0, 0)");
+
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+            }
+
+            function animate(time) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawCake();
+                drawFlame(time);
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        });
+    </script>-->
+    <script>
+        function showConfetti() {
+            // Hiệu ứng pháo hoa
+            confetti({
+                particleCount: 200,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+            // Có thể thêm nội dung hiện ra sau đó
+            setTimeout(() => {
+                alert("Chúc mừng sinh nhật Vợ, hãy gọi cho chồng nhé! 🎂🎈");
+            }, 500);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</body>
+
+</html>

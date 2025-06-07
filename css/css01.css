@@ -1,0 +1,279 @@
+﻿/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 22, 2016, 11:26:01 PM
+    Author     : Administrator
+*/
+
+body {
+    background-image: url("../img/hpbd.jpg");
+    background-size: 100%;
+    background-repeat: repeat-y;
+    font-family: "Fredoka One", cursive;
+    color: white;
+}
+
+.img_banner_hpbd {
+    background-image: url("../img/3d28ae425248a05544665dd53400f52e.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto;
+}
+
+h1.heading {
+    font-family: "Pacifico", cursive;
+}
+
+.jumbotron {
+    opacity: 0.4;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+h4 {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.bg-snow-tranparent-normal {
+    opacity: 1;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.bg-snow-tranparent-hidden {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.footer {
+    /*position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 270px;
+    background: rgba(51, 51, 51, 0.5);*/ /* Màu nền trong suốt */
+    /*backdrop-filter: blur(10px);*/ /* Làm mờ nền phía sau */
+    /*color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;*/
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh; /* Footer chiếm 20% chiều cao màn hình, giúp co giãn linh hoạt */
+    background: rgba(51, 51, 51, 0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.containeri {
+    position: relative;
+    text-align: center;
+}
+
+.top-right {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #728e98;
+    font-size: 90%;
+}
+
+.top-left {
+    position: absolute;
+    top: 132px;
+    right: 29px;
+    color: #6c7c6b;
+    font-size: 80%;
+}
+
+.center {
+    position: absolute;
+    bottom: 115px;
+    left: 250px;
+    color: #6c7c6b;
+    font-size: 80%;
+}
+
+.and {
+    position: absolute;
+    bottom: 160px;
+    left: 240px;
+    color: #6c7c6b;
+    font-size: 80%;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 253px;
+    right: 20px;
+    color: #6c7c6b;
+    font-size: 80%;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 5px;
+    left: 270px;
+    color: #b78690;
+}
+
+#heartCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 10;
+}
+
+
+.footer-slider {
+    width: 100%;
+    overflow: hidden; /* Ngăn ảnh tràn ra ngoài */
+    height: 150px; /* Điều chỉnh chiều cao của footer */
+    position: relative;
+    background: #000; /* Màu nền để phân biệt */
+}
+
+.footer-track {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các ảnh */
+    align-items: center;
+    height: 100%;
+    animation: scrollImages 20s linear infinite;
+    position: absolute;
+    white-space: nowrap; /* Giữ các ảnh trên một hàng */
+}
+
+    .footer-track img {
+        max-height: 15vh; /* Chiều cao tối đa 15% viewport height, giúp phù hợp với điện thoại */
+        /*height: 150px;*/ /* Điều chỉnh kích thước ảnh */
+        width: auto; /* Đảm bảo không bị méo */
+        object-fit: contain;
+        border-radius: 15px; /* Bo góc 15px, có thể chỉnh theo ý thích */
+        overflow: hidden; /* Đảm bảo ảnh không bị tràn */
+    }
+
+        /* Hover zoom */
+        .footer-track img:hover {
+            transform: scale(1.05);
+        }
+
+/* Animation chạy vô tận */
+@keyframes scrollImages {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        height: 25vh; /* Tăng chiều cao footer trên màn hình nhỏ */
+    }
+
+    .footer-track img {
+        height: 50%; /* Thu nhỏ ảnh một chút */
+        margin: 0 5px; /* Giảm khoảng cách ảnh */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        height: 30vh; /* Footer lớn hơn trên điện thoại */
+    }
+
+    .footer-track img {
+        height: 70%;
+    }
+}
+
+.cake-container {
+    /*position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;*/
+}
+
+.cake {
+    width: 200px; /* Điều chỉnh kích thước bánh */
+    cursor: pointer;
+}
+
+.flame {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+    text-align: center;
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.birthday-typewriter {
+    font-family: 'Pacifico', cursive;
+    color: #800000;
+    font-size: 20px;
+    padding: 40px;
+    text-align: center;
+    white-space: pre-wrap;
+    line-height: 1.8;
+    min-height: 200px;
+}
+
+#typewriterText::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+
+
+#cakeCanvas {
+    /*display: block;
+    margin: 0 auto;
+    background-color: #fff0f5;
+    border: 2px solid #ffb6c1;
+    border-radius: 20px;*/
+}
+
+#cancelBtn {
+    position: absolute;
+    left: 460px;
+    /*top: 100px;*/
+    bottom: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid #006400; /* viền xanh lá đậm */
+}
+
+
+
