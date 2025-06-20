@@ -72,7 +72,7 @@
                             <source src="ms/hpbd.mp3" type="audio/mpeg" />
                             Your browser does not support the audio element.
                         </audio>-->
-                        <iframe src="https://www.nhaccuatui.com/mh/auto/mkBHHt22SSSW" width="620" height="382" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SRdew42ngnE?si=HFMEy4CjkCIeV-VG&amp;start=12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <h1 class="heading text-danger bg-danger">
                         <!--<div class="containeri">-->
@@ -317,7 +317,13 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
+    <script>
+        function playMusic() {
+            const iframe = document.getElementById('nctPlayer');
+            // Thủ thuật: reload lại iframe khi bấm nút => player chạy
+            iframe.src = iframe.src;
+        }
+    </script>
 </body>
 
 </html>
