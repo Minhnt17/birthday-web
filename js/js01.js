@@ -124,6 +124,45 @@ function moveButton() {
     cancelBtn.style.left = `${randomX}px`;
     cancelBtn.style.bottom = `${randomBottom}px`;
 }
+document.querySelectorAll(".footer-track img").forEach(img => {
+    img.addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        // Nếu đã có ảnh clone thì xóa trước
+        const oldClone = document.getElementById("zoomed-image-clone");
+        if (oldClone) oldClone.remove();
+
+        // Clone ảnh
+        const clone = img.cloneNode();
+        clone.id = "zoomed-image-clone";
+        clone.style.position = "fixed";
+        clone.style.top = "50%";
+        clone.style.left = "50%";
+        clone.style.maxWidth = "80vw";
+        clone.style.maxHeight = "80vh";
+        clone.style.width = "auto";
+        clone.style.height = "auto";
+        clone.style.transform = "translate(-50%, -50%)";
+        clone.style.zIndex = "9999";
+        clone.style.boxShadow = "0 0 20px rgba(0,0,0,0.8)";
+        clone.style.transition = "transform 0.5s ease";
+
+        document.body.appendChild(clone);
+
+        // Pause track
+        document.querySelector(".footer-track").style.animationPlayState = "paused";
+    });
+});
+
+// Click ra ngoài để remove clone & chạy lại track
+document.addEventListener("click", function () {
+    const oldClone = document.getElementById("zoomed-image-clone");
+    if (oldClone) oldClone.remove();
+    document.querySelector(".footer-track").style.animationPlayState = "running";
+});
+
+
+
 
 
 
